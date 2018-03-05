@@ -1,0 +1,12 @@
+prefix=/usr/local
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: libaerospike
+Description: Client library for aerospike database cluster
+URL: http://www.aerospike.com
+Version: 4.3.5
+Requires: lua >= 5.0
+Requires: openssl >= 1.1
+Cflags: -I${includedir}/aerospike
+Libs: -L${libdir} -laerospike
