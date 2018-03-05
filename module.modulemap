@@ -1,5 +1,5 @@
 module libaerospike {
     header "/usr/local/include/aerospike/aerospike.h"
-    link "as"
+    link "aerospike"
     export *
 }
