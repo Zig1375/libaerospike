@@ -1,4 +1,4 @@
-module libaerospike {
+module libaerospike [system] {
     header "/usr/local/include/aerospike/aerospike_key.h"
     link "aerospike"
     export *
