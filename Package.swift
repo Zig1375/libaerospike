@@ -15,8 +15,6 @@ let package = Package(
 
     ],
     targets: [
-        .target(
-            name: "libaerospike"
-        )
+        .target( name: "libaerospike" )
     ]
 );
