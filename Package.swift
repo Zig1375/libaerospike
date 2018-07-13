@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "libaerospike",
+    pkgConfig: "libaerospike",
     products: [
         .library(
             name: "libaerospike",
