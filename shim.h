@@ -19,10 +19,7 @@ extern inline void test(aerospike* as, as_error* err) {
     as_arraylist_append_int64(&args, 1);
     as_arraylist_append_int64(&args, 2);
     as_val * res = NULL;
-    if (aerospike_key_apply(&as, &err, NULL, &key, "myudf", "hello_world2", &args, &res) != AEROSPIKE_OK) {
-        printf("error(%d) %s at [%s:%d]", err.code, err.message, err.file, err.line);
-    }
-    else {
+    if (aerospike_key_apply(&as, &err, NULL, &key, "myudf", "hello_world2", &args, &res) == AEROSPIKE_OK) {
         printf("a: %d", as_integer_get( as_integer_fromval(res) ))
         as_val_destroy(res);
     }
