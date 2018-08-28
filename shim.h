@@ -12,7 +12,7 @@ extern inline as_status aerospike_key_apply2(aerospike* as, as_error* err, const
     return aerospike_key_apply(as, err, NULL, key, module, function, arglist, result);
 }
 
-bool my_log_callback(as_log_level level, const char *func, const char *file, uint32_t line, const char *fmt, ...) {
+extern inline bool my_log_callback(as_log_level level, const char *func, const char *file, uint32_t line, const char *fmt, ...) {
     char msg[1024] = {0};
     va_list ap;
 
@@ -25,6 +25,3 @@ bool my_log_callback(as_log_level level, const char *func, const char *file, uin
 
     return true;
 }
-
-as_log_set_level(AS_LOG_LEVEL_INFO);
-as_log_set_callback(my_log_callback);
