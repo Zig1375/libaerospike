@@ -11,7 +11,7 @@ extern inline as_status aerospike_key_apply2(aerospike* as, as_error* err, const
     return aerospike_key_apply(as, err, NULL, key, module, function, arglist, result);
 }
 
-extern inline void test() {
+extern inline void test(aerospike* as, as_error* err) {
     as_key key;
     as_key_init(&key, "dmp", "test", "218");
     as_arraylist args;
