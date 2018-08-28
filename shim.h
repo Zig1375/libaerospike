@@ -21,7 +21,6 @@ extern inline void test(aerospike* as, as_error* err) {
     as_val * res = NULL;
     if (aerospike_key_apply(&as, &err, NULL, &key, "myudf", "hello_world2", &args, &res) == AEROSPIKE_OK) {
         printf("a: %d", as_integer_get( as_integer_fromval(res) ))
-        as_val_destroy(res);
     }
     as_arraylist_destroy(&args);
 }
